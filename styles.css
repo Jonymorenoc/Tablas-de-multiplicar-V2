@@ -1,0 +1,192 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 480px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Scoreboard */
+.scoreboard {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.progress-text,
+.score-text {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+/* Progress bar wrapper */
+#progress-bar-wrapper {
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin: 8px auto;
+  width: 80%;
+}
+
+/* Actual progress bar */
+#progress-bar {
+  background-color: #4a90e2;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.dropdown-btn {
+  background-color: #4a90e2; 
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+.dropdown-btn:hover {
+  background-color: #417cb8;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  z-index: 1;
+}
+.dropdown-content.hidden {
+  display: none;
+}
+.dropdown-content label {
+  display: block;
+  margin: 6px 0;
+}
+
+/* Buttons */
+.action-btn {
+  background-color: #f5a623; 
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+.action-btn:hover {
+  background-color: #d48b1d;
+}
+
+.action-btn.blue {
+  background-color: #4a90e2;
+}
+.action-btn.blue:hover {
+  background-color: #417cb8;
+}
+
+/* Emoji Box */
+.emoji-box {
+  border: 2px solid #4a90e2;
+  background-color: rgba(74, 144, 226, 0.08);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.emoji-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emoji-row {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Question */
+.math-question {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+
+/* Answer Input */
+.answer-container input {
+  font-size: 20px;
+  padding: 10px;
+  width: 60%;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.answer-container input:focus {
+  border-color: #4a90e2;
+}
+
+/* Result Text */
+#result {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+.incorrect-answer {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Misc */
+.hidden {
+  display: none;
+}
+
+/* Confetti canvas must be on top but non-interactive */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
